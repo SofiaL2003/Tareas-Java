@@ -1,0 +1,67 @@
+﻿Pregunta 1. D, E. Un método main debe ser public, tener un retorno con void, y debe ser static, la opción E es la forma normal, y la opción D agrega el final que también es correcto.
+
+
+Pregunta 2. C, D, E. El orden en que se debe hacer el código es: package, import y luego las clases, la opción C tiene los tres acomodados correctamente, la opción D sólo tiene import y la clase en el orden correcto y la opción E solo tiene package y la clase en el orden correcto.
+
+
+Pregunta 3. A, E. En esta parte, Bunny es la clase y bun es la variable de referencia que apunta a un objeto new Bunny().
+
+
+Pregunta 4. B, E, G. Son estas porque los nombres pueden tener un “_”, pero no solo, lo que descarta la A, si pueden tener el símbolo de “$” entonces la B es correcta, true es una palabra reservada de java entonces la C no puede ser, no se aceptan “.”, entonces no puede ser la D, la E se puede usar porque tiene la P en mayúscula, la F no se puede usar porque empieza con un número y deben empezar o con guión bajo o con letra y la G está bien.
+
+
+Pregunta 5. A, D, F. El objeto creado en la línea 9 queda elegible para garbage collection después de la línea 13, porque brownBear se vuelve null. El objeto de la línea 10 no queda libre en la línea 12 porque sigue referenciado por pandaBear. Después de la línea 13 ya no hay referencias accesibles a ese objeto, por lo que también queda elegible. System.gc() no garantiza que el garbage collector se ejecute, solo lo sugiere.
+
+
+Pregunta 6. F. Las variables que cuentan al final del método, en la parte marcada como SCOPE, son: water, air y twoHumps (3) porque son variables de la clase y pueden utilizarse dentro del método, después está distance (1) que es parámetro del método, y también path, age e i (3) que están dentro del método y siguen en alcance en ese punto. En total son 7 variables. Variables como teeth o Private ya no cuentan porque estaban dentro de bloques que ya terminaron.
+
+
+Pregunta 7. C, E. Cómo están puestas las comillas, no se respeta la parte de la concatenación, entonces no se imprime el valor de numForks ni numKnives, si se puede imprimir la opción C porque está puesta como en el print y no está tomando ningún valor de alguna variable, también es correcta la opción E porque en la línea [" # knives = " + numKnives +],  tiene un espacio al inicio.
+
+
+Pregunta 8. B, D, E, H. La opción B está bien porque var puede inferir que es un String. La opción D también es válida porque infiere un Integer. La opción E compila porque var infiere un int, aunque en ejecución daría error por división entre cero. La opción H es válida porque al inicio se infiere como String, por lo que puede asignarse null después.
+
+
+Pregunta 9. E. Las variables de clase sí tienen valores por defecto, y en el caso de String el valor por defecto es null. Las variables locales no tienen valor por defecto, por lo que deben inicializarse antes de usarse.
+
+
+Pregunta 10. Los números en Java pueden usar guiones bajos “_” dentro del literal, pero no al inicio, al final ni junto al punto decimal. Por eso A, E y F son válidos, mientras que las demás opciones no cumplen con estas reglas.
+
+
+Pregunta 11. E. En Java, java.lang se importa automáticamente, por lo que import java.lang.* y import java.lang.System no son necesarios. Además, si ya se tiene import aquarium.*, no es necesario import aquarium.Water. Por lo tanto, se pueden eliminar los 4 imports y el código sigue compilando.
+
+
+Pregunta 12. A, C, D. En la línea 2 hay error porque no se puede declarar una variable como int gills = 0, double weight=2;, ya que mezcla tipos en la misma línea. En la línea 4 hay error porque Java no permite parámetros con valores por defecto como int length = 3. En la línea 7 hay error porque fins fue declarado dentro de un bloque y no está en el scope del método print.
+
+
+Pregunta 13. A, B, C. La opción A funciona porque importa todas las clases del paquete aquarium, incluyendo aquarium.Water. La B funciona porque importa directamente aquarium.Water, y aunque también importa el paquete aquarium.jellies.*, gana el import directo. La C también funciona porque el import directo de aquarium.jellies.Water tiene prioridad sobre el de aquarium.*.
+
+
+Pregunta 14. A, B, D, E. La línea 3 tiene error porque 5L es un long y no se puede guardar directamente en un short. La línea 4 tiene error porque 2.0 es un double y no se puede guardar directamente en un int. La línea 6 tiene error porque un primitivo no tiene método length(). La línea 7 también tiene error porque un primitivo no tiene atributo length. La línea 8 sí está bien porque String sí tiene método length().
+
+
+Pregunta 15. C, E, F. Un objeto queda elegible cuando ya no hay referencias accesibles hacia él. Pero no se garantiza que el garbage collector se ejecute inmediatamente, incluso si se llama System.gc().
+
+
+Pregunta 16. A, D. La salida tiene dos líneas porque el “\” hace que se ignore el salto de línea entre pigeon y termite. La D también es correcta porque “\s” conserva un espacio al final de la línea de squirrel.
+
+
+Pregunta 17. D, F, G. El código sí compila. empty es un boolean de instancia, entonces su valor por defecto es false. brand es un String, entonces su valor por defecto es null. code es un float estático, entonces su valor por defecto es 0.0, y al imprimirse no aparece con la f.
+
+
+Pregunta 18. B, C, F. El tipo de una variable declarada con var se conoce en tiempo de compilación, var no se puede usar como variable de instancia ni como variable de clase, solo como variable local. También, aunque el valor puede cambiar, el tipo no puede cambiar en tiempo de ejecución.
+
+
+Pregunta 19. A, D. La salida es 100 porque Long.max() compara los dos valores y ambos son 100, num1 es primitivo porque Long.parseLong() regresa un long. En cambio, num2 es un objeto Long porque usa Long.valueOf().
+
+
+Pregunta 20. C. La línea 4 no es un constructor porque tiene void, entonces realmente es un método, como ese método nunca se ejecuta, color y age se quedan con sus valores por defecto: null y 0. Aunque primero se cambian los valores de p, después p = q, entonces p apunta al mismo objeto que q, que todavía tiene los valores por defecto. Por eso se imprime P1=null.
+
+
+Pregunta 21. D. Primero se ejecuta el main e imprime 7-. Luego se crea el objeto y se ejecutan los bloques de instancia en orden. Como count empieza en 0, primero imprime 0-, luego aumenta a 1. Después entra al constructor, cambia count a 4 e imprime 2-. Al final imprime el valor de count, que ya es 4. Entonces queda 7-0-2-4-.
+
+
+Pregunta 22. C, F, G. La opción C funciona porque 0xE es un número hexadecimal válido y puede guardarse en un int. La F funciona porque 0b101 es binario válido. La G también funciona porque es un double válido con “_” bien colocados. Las demás fallan por tipo incorrecto, nombre diferente de variable o por poner “_” junto al punto decimal.
+
+
+Pregunta 23. A, D. La línea 3 genera error porque 50.0 es un double, y no se puede guardar directamente en un float sin poner F. La línea 10 también genera error porque depth fue declarada dentro del for, entonces solo existe dentro de ese bloque y no se puede usar después.
