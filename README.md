@@ -18,3 +18,14 @@ Java Básico, Herencia y Polimorfismo
   - HolaMundoMejorado.java
   - ManipuladorStrings.java
 - Chapter 1. Building Blocks.txt
+
+**Semana_2**
+- **codigos/**
+  - BankAccount.java
+  - EventFramework.java
+  - PizzaShop.java
+  - ProductCatalog.java
+  - SimpleStack.java
+  - TicketSystem.java
+- Chapter 2. Operators.txt
+- Chapter 3. Making Decisions.txt
