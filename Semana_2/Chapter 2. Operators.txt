@@ -1,0 +1,101 @@
+﻿Pregunta 1. A, D, G
+El operador de la A se usa para comparar valores (igualdad), la D es para negar un booleano (cambiar true a false y viceversa), y la G es correcta porque sí se puede hacer cast con boolean.
+Los demás no aplican porque en general no se pueden hacer operaciones aritméticas con booleanos, y el símbolo ~ sirve para negar a nivel de bits, no para boolean.
+
+Pregunta 2. A, B, D
+Son esos porque la operación es entre números, entonces no puede ser boolean. Además, cuando se operan dos valores numéricos pequeños, automáticamente se convierten a int, así que el resultado mínimo debe ser int.
+Por eso no puede ser byte ni short. Los demás sí funcionan porque cumplen con eso.
+
+Pregunta 3. B, C, D, F
+El problema es que el resultado se promueve a long y no cabe en un int.
+* B: cambia ear a int para que coincida
+* C: cambia ear a short desde el inicio
+* D: hace cast del resultado a int
+* F: cambia el resultado a long
+Todas estas solucionan el problema de tipos.
+
+Pregunta 4. B
+Primero se evalúa la expresión con ^ (XOR). Como un lado es true y el otro false, el resultado es true, entonces canine queda en true.
+Después se imprime teeth que sigue siendo 20 porque nunca se modificó.
+Y al final wolf queda en false porque así se asignó dentro de la expresión.
+
+Pregunta 5. A, C
+La A muestra operadores aritméticos en el orden correcto de prioridad (+, luego *, %, y al final ==).
+La C muestra operadores booleanos con la misma prioridad.
+Las otras opciones no respetan bien el orden.
+
+Pregunta 6. F
+No compila porque el cast se aplica solo a fruit y no a toda la expresión.
+Entonces el resultado termina siendo float por vegetables, pero el método quiere regresar un long, y eso causa error.
+
+Pregunta 7. D
+Primero se evalúa una expresión booleana que da true.
+Luego hay un operador ternario donde una parte ni siquiera se evalúa porque la condición es false.
+Y al final se hace un pre-decremento que cambia el valor antes de compararlo, lo que hace que el resultado final sea false.
+
+Pregunta 8. A
+El código sí compila.
+El post-incremento usa el valor original antes de incrementar, por eso pig conserva su valor al asignarse.
+Y goat solo se reduce en 1, dando el resultado final correcto.
+
+Pregunta 9. A, D, E
+* D: el post-incremento primero imprime el valor original
+* E: pasa algo similar con la asignación
+* A: el ternario final regresa 1 porque la condición principal es falsa
+Todo esto coincide con el flujo del código.
+
+Pregunta 10. G
+No compila porque aunque se haga cast a byte, la multiplicación convierte todo a int.
+Entonces se intenta guardar un int en un short, lo cual no es válido.
+
+Pregunta 11. D
+Se evalúan las operaciones de izquierda a derecha porque tienen la misma prioridad.
+Los resultados son 2, 0 y 5 respectivamente.
+
+Pregunta 12. D
+El pre-incremento cambia el valor antes de usarlo, mientras que el post-incremento usa el valor original primero.
+Por eso esa opción es la correcta.
+
+Pregunta 13. F
+Se evalúan las expresiones paso a paso:
+   * Primero operadores con misma prioridad
+   * Luego negaciones
+El resultado final termina siendo false.
+
+Pregunta 14. B, E, G
+* B: se pueden comparar objetos con == y !=
+* E: una asignación devuelve el valor asignado
+* G: para números se usa -, no !
+Las demás no aplican.
+
+Pregunta 15. D
+El operador ternario es el único que usa tres valores (condición, true, false).
+Los demás usan uno o dos.
+
+Pregunta 16. B
+No compila porque se intenta guardar un long en un int.
+Las otras líneas sí son válidas.
+
+Pregunta 17. C, F
+Se van actualizando los valores paso a paso con incrementos y asignaciones.
+Al final quedan en 4 y 6 respectivamente.
+
+Pregunta 18. C
+Solo los paréntesis () cambian el orden de evaluación.
+Los demás símbolos no sirven para eso en Java.
+
+Pregunta 19. B, F
+* B: ocurre overflow en byte y se vuelve negativo
+* F: el valor final de la variable aumenta correctamente
+Ambos coinciden con la ejecución.
+
+Pregunta 20. A, D, E
+* A: operadores unarios tienen mayor prioridad
+* D: pre/post increment funcionan diferente
+* E: ! es solo para boolean
+Todo eso es correcto.
+
+Pregunta 21. E
+El complemento de bits de 8 es -9.
+Luego se compara con otro valor diferente, así que entra a otra asignación.
+Después el pre-decremento reduce el valor antes de imprimir, dando 9 como resultado.

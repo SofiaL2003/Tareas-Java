@@ -1,0 +1,146 @@
+﻿Pregunta 1. A, B, C, E, F, G
+El switch solo acepta ciertos tipos: int, byte, short, char y sus wrappers.
+También acepta String y enum, por eso esas opciones sí entran.
+No acepta otros tipos como long o boolean, entonces esos quedan fuera.
+
+Pregunta 2. B
+El código sí compila.
+Aunque los else se ven raros, cada uno pertenece a su propio if.
+Al final, la condición lleva a que se imprima "Just Right".
+
+Pregunta 3. A, D, F, H
+El for-each funciona con arreglos y con objetos que implementan Iterable.
+* A y F: son arreglos → sí funcionan
+* D y H: implementan Iterable → también
+Los demás no cumplen con eso.
+
+Pregunta 4. F
+No compila porque un switch expression necesita cubrir todos los casos posibles.
+Si no hay todos los casos, necesitas un default.
+Aquí falta eso.
+
+Pregunta 5. E
+No compila porque hay un continue antes de un print, entonces ese print nunca se ejecutaría.
+Java detecta eso como código inalcanzable.
+
+Pregunta 6. C, D, E
+* C: el for puede ejecutarse 0 o más veces
+* D: switch con String necesita default si se asigna
+* E: do/while se ejecuta al menos una vez
+Todo eso es correcto.
+
+Pregunta 7. B, D
+* B: imprime bien el arreglo en orden
+* D: imprime el arreglo en reversa correctamente
+Las otras opciones fallan por errores de índice o compilación.
+
+Pregunta 8. G
+No compila por dos razones:
+* Uso incorrecto de variables fuera de scope
+* Uso inválido de default en un if
+Por eso esa opción es la correcta.
+
+Pregunta 9. B, C, E
+Se evalúan ciclos anidados y condiciones.
+El conteo se incrementa hasta cierto punto y luego se detiene.
+Las opciones correctas siguen ese flujo.
+
+Pregunta 10. E
+Hay varios errores:
+      * continue mal usado en switch
+      * valores que no son constantes
+      * tipos incorrectos en case
+Son 4 errores en total.
+
+Pregunta 11. A
+El código sí corre y da como resultado 3.
+El default ni siquiera es necesario porque todos los casos están cubiertos.
+
+Pregunta 12. C
+Se van actualizando varias variables dentro del ciclo.
+Cuando la condición deja de cumplirse, se imprime el último valor calculado que es 23.
+
+Pregunta 13. G
+No compila porque falta poner paréntesis en una condición.
+Error de sintaxis básico.
+
+Pregunta 14. B, D, F
+En for-each:
+      * El tipo depende de lo que contiene la colección
+      * B, D y F tienen los tipos correctos
+Por eso son válidas.
+
+Pregunta 15. F
+No compila porque el case está mal escrito.
+No se pueden juntar valores sin repetir case.
+
+Pregunta 16. A, B, D
+Son formas correctas de recorrer un arreglo en reversa.
+Las otras fallan por índices o loops mal definidos.
+
+Pregunta 17. B, E
+* El primer loop corre cierto número de veces
+* El do/while corre al menos una vez
+Los resultados coinciden con esas opciones.
+
+Pregunta 18. C, E
+* C: pattern matching usa instanceof
+* E: el scope funciona dependiendo del flujo
+Las demás tienen errores conceptuales.
+
+Pregunta 19. E
+No compila porque una variable está fuera de su alcance (scope).
+Se declaró dentro del loop y se usa afuera.
+
+Pregunta 20. A, E
+La trampa aquí es detectar un loop infinito.
+      * A lo evita saltando el loop
+      * E lo rompe correctamente
+Las demás terminan en loop infinito.
+
+Pregunta 21. E
+No compila porque:
+      * tipos inválidos en switch
+      * errores de sintaxis
+      * valores duplicados
+Hay varios problemas, por eso esa opción.
+
+Pregunta 22. E
+El código sí compila.
+El var funciona porque el compilador puede inferir el tipo sin problema.
+Primero entra al switch y coincide con el case correcto, imprimiendo 5.
+Luego el while se ejecuta dos veces con el pre-decremento, dejando los valores en 2 y 1.
+Por eso el resultado final es 5 2 1.
+
+Pregunta 23. F
+No compila porque hay un else sin un if correspondiente.
+Ese es un error directo de sintaxis, entonces el código falla desde ahí.
+
+Pregunta 24. G
+No compila porque usa in en lugar de : en el for-each.
+En Java no existe in para este tipo de loop, entonces es inválido.
+
+Pregunta 25. D
+El código sí corre.
+Aunque hay variables que parecen importantes, algunas ni se usan.
+Como "violin" y "VIOLIN" no son iguales (mayúsculas), se va al default.
+Ahí se incrementa varias veces y el resultado final es 2.
+
+Pregunta 26. F
+Sí compila, pero tiene un problema lógico.
+Hay un loop donde la condición nunca cambia correctamente, entonces se vuelve infinito.
+Por eso la respuesta correcta es esa.
+
+Pregunta 27. F
+No compila porque en un switch expression todos los caminos deben devolver un valor (yield).
+Aquí hay un caso donde no se devuelve nada, entonces falla.
+
+Pregunta 28. F
+No compila por un problema de scope.
+Se está declarando una variable con el mismo nombre en un lugar donde ya existe otra con ese nombre.
+Eso no está permitido.
+
+Pregunta 29. C
+Se usa pre-incremento, entonces primero cambia el valor y luego se imprime.
+El loop sigue hasta que la condición deja de cumplirse.
+El último valor que se imprime es 6, por eso esa es la respuesta.
