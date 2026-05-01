@@ -4,8 +4,9 @@ Sofía Beurini López Méndez
 Academia Xideral MID 2026  
 
 ## Descripción
-Repositorio con ejercicios de Java correspondientes a la Semana 1:
-Java Básico, Herencia y Polimorfismo
+Repositorio con ejercicios de Java correspondientes a:
+Semana 1: Java Básico, Herencia y Polimorfismo
+Semana 2: Excepciones, Patrones y Diseño
 
 ## Contenido
 
