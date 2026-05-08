@@ -1,0 +1,101 @@
+Pregunta 1. A, E
+Las variables de instancia y las static sí pueden marcarse como final, por eso A es correcta. 
+Una variable effectively final es una variable local que no cambia después de asignarse, aunque 
+no tenga el modificador final explícitamente. Cuando un primitivo se marca como final ya no puede 
+modificarse, por eso E también es correcta.
+
+Pregunta 2. B, C
+void es un tipo de retorno, entonces antes de él solo pueden ir modificadores de acceso u opcionales. 
+B es correcta porque usa package access con final. C también es correcta porque crea un método private válido. 
+Las demás tienen problemas de sintaxis, orden o palabras inválidas.
+
+Pregunta 3. A, D
+Los modificadores opcionales pueden ponerse en cualquier orden, por eso A y D son válidas. 
+Las demás tienen problemas con tipos de retorno duplicados o con el orden incorrecto entre 
+modificadores y tipo de retorno.
+
+Pregunta 4. A, B, C, E
+El valor 6 puede promoverse implícitamente a distintos tipos primitivos, haciendo válidas A, C y E. 
+También puede aplicarse autoboxing a Integer, por eso B es correcta. No puede hacerse promoción y 
+autoboxing al mismo tiempo, entonces D y F son incorrectas.
+
+Pregunta 5. A, C, D
+Un método void sí puede usar return mientras no regrese ningún valor, por eso A y C son correctas. 
+D también es correcta porque regresa un int válido. B no compila porque null solo funciona con referencias 
+y no con tipos primitivos. E tampoco compila porque intenta regresar un double cuando el método es int. 
+F falla porque realmente no regresa ningún valor.
+
+Pregunta 6. A, B, F
+En varargs, el parámetro variable siempre debe ir al final. A y B cumplen con eso. F también es correcta 
+porque sí puede existir un parámetro normal antes del varargs. Las demás rompen las reglas de sintaxis de varargs.
+
+Pregunta 7. D, F
+D pasa el parámetro inicial más dos valores que forman el arreglo varargs de tamaño 2. F también 
+funciona porque pasa directamente un arreglo de tamaño 2. Las otras tienen problemas porque falta 
+el parámetro inicial o el arreglo está mal declarado.
+
+Pregunta 8. D
+La práctica común es poner los atributos private y acceder mediante métodos public. D es correcta 
+porque package access sí permite acceso dentro del paquete y protected agrega acceso para subclases. 
+Las demás interpretan mal los niveles de acceso.
+
+Pregunta 9. B, C, D, F
+Las clases están en paquetes distintos, entonces private y package access no funcionan. Eso provoca 
+errores en varias líneas. protected tampoco funciona porque no hay herencia entre las clases. Por eso 
+esas opciones son las correctas.
+
+Pregunta 10. B
+Primero corre el bloque static y después se ejecutan las llamadas a métodos static. Java permite 
+llamar métodos static usando referencias, aunque no sea recomendado. También se usa static import para 
+acceder a LENGTH. Por eso la salida corresponde a la opción B.
+
+Pregunta 11. B, E
+Los métodos static no pueden acceder directamente a métodos de instancia. Aunque se use una referencia, 
+Java detecta que play() es static. Si se quita la línea problemática, el código imprime swing-swing. 
+Tampoco ocurre NullPointerException porque el método llamado es static.
+
+Pregunta 12. B
+Una variable effectively final es aquella que no cambia después de asignarse. monkey no lo es porque cambia después. 
+giraffe y name sí lo son porque nunca se modifican. food tampoco es effectively final porque se reasigna. 
+Por eso solo hay dos variables effectively final.
+
+Pregunta 13. D
+RopeSwing tiene un inicializador de instancia y no static. Como nunca se crea un objeto, ese bloque no corre. 
+Además, length es static, entonces cualquier cambio afecta la misma variable compartida. El resultado final es 8.
+
+Pregunta 14. E
+Las variables static final deben asignarse exactamente una vez y solo en la declaración o en bloques static. 
+Algunas líneas intentan asignarlas más de una vez o fuera de los lugares permitidos. En total hay cuatro 
+líneas que no compilan.
+
+Pregunta 15. B
+Un static import solo funciona con miembros static. Collections es una clase y necesita import normal. 
+También el orden correcto es import static. Las demás opciones tienen sintaxis inválida o intentan importar 
+algo que no corresponde.
+
+Pregunta 16. E
+Un short puede promoverse a int, entonces se llama al método print(int). boolean se autoboxea a Boolean y 
+double se autoboxea a Double. Por eso la salida final es int-Object-Object-.
+
+Pregunta 17. B
+Java trabaja con pass-by-value. Aunque dentro del método cambie x, la variable original value sigue siendo 9. 
+result sí se vuelve 81, pero lo que se imprime después sigue siendo el valor original.
+
+Pregunta 18. B, D, E
+Java usa pass-by-value, entonces reasignar una referencia dentro del método no cambia el objeto original. 
+Sin embargo, modificar el contenido del objeto sí afecta porque ambas referencias apuntan al mismo objeto. 
+Regresar un objeto también pasa la referencia para usarla después.
+
+Pregunta 19. B, C, E
+value1 es una variable final de instancia y solo puede asignarse una vez. value2 es static, entonces tanto 
+inicializadores static como de instancia pueden accederla. value3 es de instancia y no puede usarse desde un 
+bloque static.
+
+Pregunta 20. A, E
+El parámetro 100 es int, entonces Java usa directamente el método con int. Cuando ese método desaparece, 
+Java busca la siguiente mejor coincidencia y prefiere autoboxing antes que varargs. En el caso de 100L, se 
+convierte en Long y termina usando el método con Object.
+
+Pregunta 21. B, D
+Para sobrecarga, la lista de parámetros debe cambiar. B y D cumplen eso. El tipo de retorno y modificadores 
+no necesitan coincidir. Las demás opciones fallan porque mantienen la misma firma o usan mal varargs.

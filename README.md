@@ -30,3 +30,14 @@ Semana 2: Excepciones, Patrones y Diseño
   - TicketSystem.java
 - Chapter 2. Operators.txt
 - Chapter 3. Making Decisions.txt
+
+**Semana_3**
+- **codigos/**
+  - ConcurrentScraper.java
+  - Contact.java
+  - ExpiringCache.java
+  - SalesAnalyzer.java
+  - TextAnalyzer.java
+  - ValidatorDemo.java
+- Chapter 4. Core APIs.txt
+- Chapter 5. Methods.txt

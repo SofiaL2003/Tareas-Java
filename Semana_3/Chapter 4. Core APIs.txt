@@ -1,0 +1,98 @@
+Pregunta 1. F
+No compila por la línea 5. numFish es int y 1 también es int, entonces primero se hace una suma numérica y da 5. 
+El problema es que ese resultado es int y se intenta guardar en una variable String, por eso marca error.
+
+Pregunta 2. C, E, F
+No son legales porque tienen problemas en la declaración del arreglo. 
+En C se usa el nombre de una variable como si fuera un tipo. 
+En E y F no se especifica el tamaño de la primera dimensión, y en arreglos multidimensionales esa sí es obligatoria.
+
+Pregunta 3. A, C, D
+Son correctas porque representan fechas válidas. Java puede ajustar correctamente el horario de verano en A y C. 
+D también es válida porque es una fecha normal y no depende del cambio de horario. 
+Las otras fallan por fechas inválidas o por usar mal el enum Month.
+
+Pregunta 4. A, C, D
+El código sí compila. equals() compara contenido, por eso una comparación da true. En cambio, == compara referencias. 
+Algunas referencias apuntan al String Pool y otras a objetos creados con new, por eso no todas las comparaciones dan true.
+
+Pregunta 5. B
+Se usa method chaining con StringBuilder. Primero append() modifica el objeto, y 
+después los insert() se aplican sobre ese mismo resultado. Al final queda el valor abbaccca.
+
+Pregunta 6. C
+No compila por errores con los tipos de retorno. round() con float regresa int, pero con double regresa long. 
+Además, random() regresa double. Por eso hay dos líneas con error de compilación.
+
+Pregunta 7. A, E
+Para comparar zonas horarias conviene convertir a GMT. La primera fecha queda como 9:00 GMT y la segunda como 15:00 GMT. 
+Por eso la primera ocurre antes por seis horas.
+
+Pregunta 8. A, B, F
+Los índices empiezan en 0. A es correcta porque el índice 4 corresponde al carácter esperado. 
+B también es correcta porque replace() reemplaza desde el índice inicial hasta antes del final. 
+F es correcta porque después del replace(), el carácter en el índice 2 coincide con lo esperado.
+
+Pregunta 9. A, C, F
+Los arreglos empiezan en índice 0, por eso A es correcta. También los arreglos no pueden cambiar de 
+tamaño, entonces C es correcta. Además, los arreglos no sobrescriben equals(), por lo que comparan referencias 
+y F también es correcta.
+
+Pregunta 10. A
+Todas las líneas compilan. min() y floor() regresan el mismo tipo que reciben según el caso, y round() 
+con double regresa long. Por eso la respuesta correcta es que el código sí compila.
+
+Pregunta 11. E
+No compila porque LocalDate solo maneja fecha, no hora. Entonces no existe un método para agregar horas a un LocalDate.
+
+Pregunta 12. A, D, E
+indent() agrega un espacio al inicio de los números y stripLeading() lo elimina. Luego substring() 
+se evalúa tomando en cuenta que el índice final no se incluye. Una de las llamadas termina dando un String vacío, 
+por eso también se imprime una línea en blanco.
+
+Pregunta 13. B
+String es inmutable, entonces concat() regresa un nuevo String pero no cambia el original. 
+En cambio, StringBuilder sí es mutable y append() modifica el mismo objeto. Por eso la opción correcta es B.
+
+Pregunta 14. A, F
+A crea correctamente el instant actual. F también es una conversión válida. Las demás opciones fallan porque 
+Instant no se crea con constructor público o porque se intenta convertir desde objetos que no representan 
+un momento exacto sin zona horaria.
+
+Pregunta 15. C, E
+Al ordenar, los números van antes que las letras y las mayúsculas antes que las minúsculas. Por eso C es correcta. 
+binarySearch() indica dónde se insertaría el valor si no lo encuentra, y regresa ese índice en negativo menos 1, 
+por eso E también es correcta.
+
+Pregunta 16. A, B, G
+El texto base tiene 11 caracteres porque los caracteres de escape cuentan como uno. indent() agrega espacios 
+al inicio de las líneas y también normaliza agregando un salto de línea al final si falta. translateEscapes() 
+convierte escapes escritos como texto en caracteres reales, por eso reduce la cantidad de caracteres.
+
+Pregunta 17. A, G
+substring() incluye el índice inicial pero no el final. Con 1 y 2 regresa un String de un solo carácter. 
+En cambio, usar los índices en orden incorrecto provoca una excepción, por eso G también es correcta.
+
+Pregunta 18. C, F
+Primero, el text block equivale a un String normal de cuatro caracteres. 
+Luego se concatena y se forma un String de longitud 7, por eso C es correcta. 
+Después, aunque dos Strings tienen el mismo contenido, no son el mismo objeto en 
+memoria, así que la comparación con == da false y F también es correcta.
+
+Pregunta 19. A, B, D
+compare() devuelve un número positivo cuando el primer arreglo es mayor. Eso pasa en A. mismatch() 
+devuelve un índice positivo cuando encuentra diferencia en una posición válida; en este caso la diferencia está 
+en el índice 1, por eso B y D son correctas.
+
+Pregunta 20. A, D
+El primer DateTime tiene hora 1:30 y el segundo 2:30, pero por el cambio de horario de verano se ajusta 
+correctamente. A es correcta porque queda una hora después. D también es correcta porque la nueva hora termina siendo 3.
+
+Pregunta 21. A, C
+reverse() es la forma más directa de invertir un StringBuilder, por eso A es correcta. C también funciona 
+porque va eliminando caracteres hasta dejar el resultado esperado. Las otras opciones no dan el resultado 
+correcto o lanzan excepción.
+
+Pregunta 22. A
+La fecha inicia como April 30, 2022. Como las fechas son inmutables y no se guarda el resultado de plus(), 
+la fecha original no cambia. Por eso la respuesta correcta es A.
